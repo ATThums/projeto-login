@@ -8,20 +8,13 @@
     box-sizing: border-box;
 }
 
-html {
-    background-color: #5d2c80;
+html, main {
     width: 100vw;
     height: 100vh;
 }
 
 body {
-    max-width: 700px;
-    max-height: 300px;
-}
-
-main {
-    width: 100vw;
-    height: 100vh;
+    background-color: #5d2c80;
 }
 
 section#login {
@@ -29,16 +22,18 @@ section#login {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
 
     background-color: white;
     display: block;
-    width: 500px;
-    height: 400px;
+    width: 250px;
+    height: 500px;
     margin: auto;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 2px rgba(5, 5, 5, 0.288);
-}
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+} 
+
 
 h1 {
     text-align: center;
@@ -46,8 +41,7 @@ h1 {
 }
 
 p {
-    font-size: 1em;
-    padding: 5px;
+    padding: 8px
 }
 
 div.container {
@@ -60,22 +54,32 @@ div.container {
 }
 
 div#imagem {
+    display: block;
     width: 100%;
     height: 200px;
-    background-image: url('../imagens/building.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px 20px 0px 0px;
+    background: url('../imagens/building.jpg') no-repeat;
+    background-size: cover; 
 }
 
-div.container > label {
+div#formulario {
+    display: block;
+}
+
+div.container > i {
     margin: auto;
 }
 
+div.container > label {
+    display: none;
+}
+
 div.container > input {
-    height: 80%;
+    height: 90%;
+    width: calc(100% - 29px);
     margin: 0px;
     border-radius: 5px;
+    transform: translateY(-3px);
+    border: 1px solid  #5d2c80;
 }
 
 div#botoes {
@@ -88,6 +92,7 @@ div#botoes > input {
     margin: 2px;
     border-color: #4ba49d;
     border-radius: 5px;
+    border: 1px solid #4ba49d;
 }
 
 input#enviar {
@@ -95,11 +100,15 @@ input#enviar {
     color: white;   
 }
 
-input#limpar {
+input#enviar:hover {
+    background-color: #1c5d58;
+}
+
+input#button {
     background-color: white;
     color: #4ba49d;
 }
 
-input#limpar::after {
-
-}
+input#button:hover {
+    background-color: #6be6dc;
+}    
