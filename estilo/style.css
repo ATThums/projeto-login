@@ -34,23 +34,13 @@ section#login {
     transform: translate(-50%,-50%);
 } 
 
-
 h1 {
     text-align: center;
     margin: 8px;
 }
 
 p {
-    padding: 8px
-}
-
-div.container {
-    background-color: #5d2c80;
-    color: white;
-    width: 90%;
-    height: 30px;
-    border-radius: 5px;
-    margin: 4px auto;
+    padding: 10px; 
 }
 
 div#imagem {
@@ -65,24 +55,35 @@ div#formulario {
     display: block;
 }
 
-div.container > i {
-    margin: auto;
+div.container {
+    background-color: #5d2c80;
+    color: white;
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 4px auto;
 }
 
 div.container > label {
     display: none;
 }
 
-div.container > input {
+div.container > input {    
     height: 90%;
     width: calc(100% - 29px);
     margin: 0px;
     border-radius: 5px;
     transform: translateY(-3px);
     border: 1px solid  #5d2c80;
+    background-color: rgb(142, 226, 212);
+}
+
+div.container > input:focus-within {
+    background-color: white;
 }
 
 div#botoes {
+    display: block;
     text-align: center;
 }
 
@@ -112,3 +113,11 @@ input#button {
 input#button:hover {
     background-color: #6be6dc;
 }    
+
+form > a.botao:hover
+{
+    background-color: #6cd3cf;
+}
+form > a.botao > i {
+    font-size: 0.8em;
+}
